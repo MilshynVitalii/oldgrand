@@ -19,5 +19,136 @@
   font-weight: normal;
   font-style: normal; }
 
-body {
-  font-family: "Proxima Nova Bold", sans-serif; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  max-width: 1920px;
+  color: #1c1c1c;
+  font-family: "Proxima Nova Light", sans-serif; }
+
+button {
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: "Proxima Nova Bold", sans-serif;
+  cursor: pointer; }
+  button:focus {
+    outline: none; }
+
+ul {
+  list-style: none; }
+
+a {
+  color: #1c1c1c;
+  text-decoration: none; }
+  a:hover {
+    color: #e42626; }
+  a:active {
+    color: #1c1c1c; }
+
+.main-button {
+  background: -webkit-gradient(linear, left top, right top, from(#c10b0b), to(#e42626));
+  background: -webkit-linear-gradient(left, #c10b0b, #e42626);
+  background: linear-gradient(90deg, #c10b0b, #e42626); }
+  .main-button:hover {
+    background: -webkit-gradient(linear, left top, right top, from(#e30d0d), to(#e84646));
+    background: -webkit-linear-gradient(left, #e30d0d, #e84646);
+    background: linear-gradient(90deg, #e30d0d, #e84646); }
+  .main-button:active {
+    background: -webkit-gradient(linear, left top, right top, from(#a90a0a), to(#d61b1b));
+    background: -webkit-linear-gradient(left, #a90a0a, #d61b1b);
+    background: linear-gradient(90deg, #a90a0a, #d61b1b); }
+
+.container {
+  max-width: 940px;
+  margin: auto; }
+
+.header-subnav {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 80px;
+  margin-top: 50px; }
+  .header-subnav__tel {
+    font-family: "Proxima Nova Bold", sans-serif;
+    font-size: 18px; }
+  .header-subnav__icons {
+    display: -webkit-box;
+    display: flex; }
+    .header-subnav__icons .apple-icon, .header-subnav__icons .android-icon {
+      width: 40px;
+      height: 40px;
+      border: 2px solid #e42626;
+      border-radius: 5px;
+      margin-left: 10px; }
+    .header-subnav__icons .android-icon {
+      background: url(../img/android-1.png) no-repeat center;
+      background-size: 60%; }
+      .header-subnav__icons .android-icon:hover {
+        background: #e42626 url(../img/android-2.png) no-repeat center;
+        background-size: 60%;
+        box-shadow: 0 0 2px 3px rgba(228, 38, 38, 0.2); }
+      .header-subnav__icons .android-icon:active {
+        background: #e42626 url(../img/android-2.png) no-repeat center;
+        background-size: 60%;
+        box-shadow: 0 0 1px 1px rgba(228, 38, 38, 0.3); }
+    .header-subnav__icons .apple-icon {
+      background: url(../img/apple-1.png) no-repeat center;
+      background-size: 45%; }
+      .header-subnav__icons .apple-icon:hover {
+        background: #e42626 url(../img/apple-2.png) no-repeat center;
+        background-size: 45%;
+        box-shadow: 0 0 2px 3px rgba(228, 38, 38, 0.2); }
+      .header-subnav__icons .apple-icon:active {
+        background: #e42626 url(../img/apple-2.png) no-repeat center;
+        background-size: 45%;
+        box-shadow: 0 0 1px 1px rgba(228, 38, 38, 0.3); }
+
+.navigation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-bottom: 2px solid #f5f5f5; }
+  .navigation__container {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    max-width: 940px;
+    margin: 0 auto;
+    font-size: 14px; }
+  .navigation__menu {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-basis: 60%; }
+    .navigation__menu li {
+      -webkit-box-flex: 1;
+      flex-grow: 1;
+      text-align: center; }
+    .navigation__menu-link {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      line-height: 50px;
+      border-left: 2px solid #ffffff;
+      border-right: 2px solid #ffffff; }
+      .navigation__menu-link:hover {
+        background: rgba(228, 38, 38, 0.02);
+        border-left: 2px solid rgba(228, 38, 38, 0.1);
+        border-right: 2px solid rgba(228, 38, 38, 0.1); }
+  .navigation__tel {
+    align-self: center;
+    font-family: "Proxima Nova Bold", sans-serif; }
+  .navigation__button {
+    font-size: 12px;
+    padding: 8px 20px;
+    margin: 10px 0; }
