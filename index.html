@@ -12,10 +12,15 @@
       <div class="container">
         <nav class="navigation">
           <div class="navigation__container">
+            <button class="navigation__burger">
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+            </button>
             <a href="tel:+74993228580" class="navigation__tel"
               >+7 499 322-85-80</a
             >
-            <ul class="navigation__menu">
+            <ul class="navigation__menu navigation__menu_active">
               <li>
                 <a href="#" class="navigation__menu-link">Как мы работаем</a>
               </li>
@@ -35,7 +40,7 @@
         <!-- /.navigation -->
         <div class="header-subnav">
           <img src="./img/header-logo.png" alt="Логотип" />
-          <p>Ваш личный юрист всегда на связи</p>
+          <p class="header-subnav__text">Ваш личный юрист всегда на связи</p>
           <a href="tel:+74993228580" class="header-subnav__tel"
             >+7 499 322-85-80</a
           >
@@ -55,8 +60,10 @@
             Годовой абонемент на услуги <span>«личного юриста»</span>
           </h1>
           <p class="intro__desc">
-            24 часа в сутки Ваш личный юрист <br /><strong>– Advogrand</strong>
-            на связи всего <br /><strong>за 12 рублей в день</strong>
+            24 часа в сутки Ваш личный юрист <br />
+            <strong>– Advogrand</strong>
+            на связи всего <br />
+            <strong>за 12 рублей в день</strong>
           </p>
           <button class="main-button intro__button">
             Хочу «личного юриста»!
@@ -67,5 +74,7 @@
       <!-- /.container -->
     </section>
     <!-- /.intro -->
+
+    <script src="./js/main.js"></script>
   </body>
 </html>

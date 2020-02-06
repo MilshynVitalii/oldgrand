@@ -45,18 +45,34 @@
     left: 0
     top: 0
     width: 100%
-    border-bottom: 2px solid $grey-color
+    border-bottom: 2px solid $gray-color
     background-color: #ffffff
     &__container
         display: flex
         justify-content: space-between
-        max-width: 940px
+        max-width: 960px
         margin: 0 auto
+        padding: 0 10px
         font-size: 14px
+    &__burger
+        display: none
+        background-color: transparent
+        border: none
+        & .burger-line
+            display: block
+            width: 30px
+            border: 2px solid $main-color
+            border-radius: 20%
+            margin: 3px 0
+        &_active
+            & .burger-line
+                border-color: lighten($main-color, 30%)
+                margin: 6px 0
     &__menu
         display: flex
         justify-content: space-between
         flex-basis: 60%
+        background-color: #ffffff
         & li
             flex-grow: 1
             text-align: center
@@ -79,3 +95,53 @@
         font-size: 12px
         padding: 8px 20px
         margin: 10px 0
+
+@media screen and (max-width: 800px)
+    .header
+        &-subnav
+            &__text
+                display: none
+            &__tel
+                text-align: right
+                flex-grow: 1
+    .navigation
+        &__container
+            background-color: #ffffff
+            padding: 0 30px
+        &__tel
+            display: none
+        &__burger
+            display: block
+        &__menu
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            box-shadow: 0px 3px 4px -5px $text-color
+            transition: 0.3s
+            z-index: -1
+
+@media screen and (max-width: 560px)
+    .header
+        &-subnav
+            &__tel
+                display: none
+            &__icons
+                display: flex
+                & .apple-icon, .android-icon
+                    width: 35px
+                    height: 35px
+    .navigation
+        &__container
+            background-color: #ffffff
+            padding: 0 10px
+        &__menu
+            flex-direction: column
+            &-link
+                border: none
+                border-top: 2px solid #ffffff
+                border-bottom: 2px solid #ffffff
+                &:hover
+                    border: none
+                    border-top: 2px solid rgba($main-color, 0.1)
+                    border-bottom: 2px solid rgba($main-color, 0.1)

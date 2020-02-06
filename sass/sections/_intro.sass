@@ -7,7 +7,6 @@
         display: flex
         flex-direction: column
         justify-content: center
-        align-items: start
         width: 50%
         height: 100%
     &__title
@@ -15,7 +14,7 @@
         line-height: 1.4
         & span
             text-transform: uppercase
-            font-size: 35px
+            font-size: 1.2em
     &__desc
         margin-bottom: 60px
         font-size: 24px
@@ -23,4 +22,27 @@
     &__button
         padding: 25px 40px
         font-size: 18px
+        align-self: flex-start
     
+@media screen and (max-width: 800px)
+    .intro
+        background-position-x: 60%
+        &-wrap
+            width: 80%
+
+@media screen and (max-width: 560px)
+    .intro
+        background-position-x: 65%
+        &-wrap
+            width: 90%
+        &__title
+            font-size: 24px
+            line-height: 1.2
+            margin-bottom: 40px
+        &__desc
+            font-size: 18px
+            line-height: 1.2
+            margin-bottom: 40px
+        &__button
+            font-size: 14px
+            padding: 15px 25px
