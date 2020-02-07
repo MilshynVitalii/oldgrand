@@ -3,7 +3,9 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
-const cleanCSS = require("gulp-clean-css");
+const gcmq = require("gulp-group-css-media-queries");
+// const cleanCSS = require("gulp-clean-css");
+
 sass.compiler = require("node-sass");
 
 function style() {
@@ -17,6 +19,7 @@ function style() {
           cascade: false
         })
       )
+      .pipe(gcmq())
       // .pipe(cleanCSS({ level: 2 }))
       .pipe(gulp.dest("./css"))
   );
