@@ -1,12 +1,8 @@
 .intro
     width: 100%
-    height: 610px
     background: url(../img/intro-bg.jpg) no-repeat center
     color: #ffffff
     &-wrap
-        display: flex
-        flex-direction: column
-        justify-content: center
         width: 50%
         height: 100%
     &__title
@@ -23,7 +19,6 @@
     &__button
         padding: 25px 40px
         font-size: 18px
-        align-self: flex-start
     
 @media screen and (max-width: 800px)
     .intro
@@ -35,14 +30,13 @@
     .intro
         background-position-x: 65%
         &-wrap
+            padding-top: 50px
             width: 90%
         &__title
             line-height: 1.2
-            margin-bottom: 40px
         &__desc
             font-size: 18px
             line-height: 1.2
-            margin-bottom: 40px
         &__button
             font-size: 14px
             padding: 15px 25px

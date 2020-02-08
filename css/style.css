@@ -246,19 +246,11 @@ a:active {
 
 .intro {
   width: 100%;
-  height: 610px;
   background: url(../img/intro-bg.jpg) no-repeat center;
   color: #ffffff;
 }
 
 .intro-wrap {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  justify-content: center;
   width: 50%;
   height: 100%;
 }
@@ -283,7 +275,6 @@ a:active {
 .intro__button {
   padding: 25px 40px;
   font-size: 18px;
-  align-self: flex-start;
 }
 
 .services__wrap {
@@ -293,6 +284,10 @@ a:active {
 }
 
 .services__item {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
   flex-basis: 33.33%;
   margin-top: 80px;
 }
@@ -305,6 +300,52 @@ a:active {
   display: inline-block;
   max-width: 150px;
   margin-top: 10px;
+}
+
+.aboutus {
+  background: url(../img/aboutus-bg.jpg) no-repeat center top -150px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.aboutus__text-block {
+  width: 90%;
+  margin: 70px auto;
+}
+
+.aboutus__text {
+  margin-bottom: 25px;
+}
+
+.aboutus__numbers {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.aboutus__item {
+  flex-basis: 25%;
+  margin-top: 40px;
+}
+
+.aboutus__number {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 48px;
+  font-family: "Proxima Nova Bold", sans-serif;
+}
+
+.aboutus__number small {
+  font-size: 20px;
+}
+
+.aboutus__number-text {
+  display: inline-block;
+  max-width: 155px;
 }
 
 @media screen and (max-width: 800px) {
@@ -360,18 +401,30 @@ a:active {
   }
 
   .services__item {
-    display: -webkit-box;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
-    -webkit-box-align: center;
-    align-items: center;
     flex-basis: 50%;
+  }
+
+  .services__icon {
+    margin: 0;
   }
 
   .services__link {
     text-align: center;
+  }
+
+  .aboutus {
+    background-position-x: 57%;
+  }
+
+  .aboutus__text-block {
+    margin-bottom: 30px;
+  }
+
+  .aboutus__item {
+    flex-basis: 50%;
   }
 }
 
@@ -431,18 +484,17 @@ a:active {
   }
 
   .intro-wrap {
+    padding-top: 50px;
     width: 90%;
   }
 
   .intro__title {
     line-height: 1.2;
-    margin-bottom: 40px;
   }
 
   .intro__desc {
     font-size: 18px;
     line-height: 1.2;
-    margin-bottom: 40px;
   }
 
   .intro__button {
@@ -452,6 +504,25 @@ a:active {
 
   .services__item {
     flex-basis: 100%;
-    margin-top: 50px;
+    margin-top: 60px;
+  }
+
+  .aboutus__text-block {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .aboutus__text {
+    margin-bottom: 15px;
+  }
+
+  .aboutus__item {
+    flex-basis: 100%;
+  }
+
+  .aboutus__number {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 40px;
   }
 }

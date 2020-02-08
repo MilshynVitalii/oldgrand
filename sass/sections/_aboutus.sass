@@ -1,0 +1,50 @@
+.aboutus
+    background: url(../img/aboutus-bg.jpg) no-repeat center top -150px
+    color: #ffffff
+    text-align: center
+    &__text-block
+        width: 90%
+        margin: 70px auto
+    &__text
+        margin-bottom: 25px
+    &__numbers
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        width: 90%
+        margin: 0 auto
+    &__item
+        flex-basis: 25%
+        margin-top: 40px
+    &__number
+        display: block
+        margin-bottom: 25px
+        font-size: 48px
+        +bold
+        & small
+            font-size: 20px
+        &-text
+            display: inline-block
+            max-width: 155px       
+
+@media screen and (max-width: 800px)
+    .aboutus
+        background-position-x: 57%
+        &__text-block
+            margin-bottom: 30px
+        &__item
+            flex-basis: 50%
+
+@media screen and (max-width: 560px)
+    .aboutus
+        &__text-block
+            width: 100%
+            margin-bottom: 0
+        &__text
+            margin-bottom: 15px
+        &__item
+            flex-basis: 100%
+        &__number
+            display: block
+            margin-bottom: 10px
+            font-size: 40px
