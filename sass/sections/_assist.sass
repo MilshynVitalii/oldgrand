@@ -1,0 +1,27 @@
+.assist
+    background-color: $gray-color
+    &__wrap
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+        margin-top: 100px
+    &__item
+        text-align: center
+    &__text
+        display: block
+        max-width: 250px
+        margin: 50px auto
+        &_bold
+            +bold
+
+@media screen and (max-width: 560px)
+    .assist
+        &__wrap
+            margin-top: 50px
+        &__item
+            flex-basis: 100%
+        &__text
+            margin-top: 20px
+            &_bold
+                margin-bottom: 25px
+        
