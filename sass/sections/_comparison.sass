@@ -1,0 +1,62 @@
+.comparison
+    &-wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-top: 80px
+    &__numbers
+        width: 300px
+        img
+            margin-right: 20px
+            vertical-align: middle
+        p
+            height: 55px
+            line-height: 55px
+    &__button
+        width: 100%
+        padding: 25px 0
+        margin-top: 20px
+        font-size: 18px
+    &__table
+        flex-basis: 60%
+        border-collapse: collapse
+        text-align: center
+        td, th
+            width: 33%
+            height: 55px
+        td
+            font-size: 13px
+        th
+            font-size: 14px
+        tr:first-child
+            th:nth-child(3)
+                border-top: 2px solid $gray-color
+        tr:last-child
+            td:nth-child(3)
+                border-bottom: 2px solid $gray-color
+        tr:first-child
+            th:nth-child(2)
+                border-top: 2px solid #26b83a
+        tr:last-child
+            td:nth-child(2)
+                border-bottom: 2px solid #26b83a
+                box-shadow: 0 7px 10px -7px #26b83a
+        td:nth-child(2),th:nth-child(2)
+            background-color: #26b83a
+            color: #ffffff
+        td:nth-child(3),th:nth-child(3)
+            border-left: 2px solid $gray-color
+            border-right: 2px solid $gray-color
+
+@media screen and (max-width: 800px)
+    .comparison
+        &-wrap
+            justify-content: center
+        &__table
+            flex-basis: 70%
+            margin-bottom: 50px
+
+@media screen and (max-width: 560px)
+    .comparison
+        &__table
+            flex-basis: 100%

@@ -1,24 +1,24 @@
 @font-face {
-  font-family: "Proxima Nova Light";
+  font-family: "Proxima Nova";
   src: url("../fonts/ProximaNova-Light.eot");
   src: url("../fonts/ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Light.woff") format("woff"), url("../fonts/ProximaNova-Light.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Proxima Nova Regular";
+  font-family: "Proxima Nova";
   src: url("../fonts/ProximaNova-Regular.eot");
   src: url("../fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Proxima Nova Bold";
+  font-family: "Proxima Nova";
   src: url("../fonts/ProximaNova-Bold.eot");
   src: url("../fonts/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova-Bold.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -32,7 +32,8 @@ html {
   max-width: 1920px;
   margin: 0 auto;
   color: #1c1c1c;
-  font-family: "Proxima Nova Light", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 200;
 }
 
 section {
@@ -43,7 +44,8 @@ button {
   border: none;
   border-radius: 5px;
   color: #ffffff;
-  font-family: "Proxima Nova Bold", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -89,7 +91,8 @@ a:active {
 .section-title {
   text-align: center;
   font-size: 30px;
-  font-family: "Proxima Nova Bold", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 700;
 }
 
 .container {
@@ -112,7 +115,8 @@ a:active {
 }
 
 .header-subnav__tel {
-  font-family: "Proxima Nova Bold", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 700;
   font-size: 18px;
 }
 
@@ -235,7 +239,8 @@ a:active {
 
 .navigation__tel {
   align-self: center;
-  font-family: "Proxima Nova Bold", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 700;
 }
 
 .navigation__button {
@@ -336,7 +341,8 @@ a:active {
   display: block;
   margin-bottom: 25px;
   font-size: 48px;
-  font-family: "Proxima Nova Bold", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 700;
 }
 
 .aboutus__number small {
@@ -371,7 +377,87 @@ a:active {
 }
 
 .assist__text_bold {
-  font-family: "Proxima Nova Bold", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 700;
+}
+
+.comparison-wrap {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.comparison__numbers {
+  width: 300px;
+}
+
+.comparison__numbers img {
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+.comparison__numbers p {
+  height: 55px;
+  line-height: 55px;
+}
+
+.comparison__button {
+  width: 100%;
+  padding: 25px 0;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.comparison__table {
+  flex-basis: 60%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.comparison__table td,
+.comparison__table th {
+  width: 33%;
+  height: 55px;
+}
+
+.comparison__table td {
+  font-size: 13px;
+}
+
+.comparison__table th {
+  font-size: 14px;
+}
+
+.comparison__table tr:first-child th:nth-child(3) {
+  border-top: 2px solid #f5f5f5;
+}
+
+.comparison__table tr:last-child td:nth-child(3) {
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.comparison__table tr:first-child th:nth-child(2) {
+  border-top: 2px solid #26b83a;
+}
+
+.comparison__table tr:last-child td:nth-child(2) {
+  border-bottom: 2px solid #26b83a;
+  box-shadow: 0 7px 10px -7px #26b83a;
+}
+
+.comparison__table td:nth-child(2),
+.comparison__table th:nth-child(2) {
+  background-color: #26b83a;
+  color: #ffffff;
+}
+
+.comparison__table td:nth-child(3),
+.comparison__table th:nth-child(3) {
+  border-left: 2px solid #f5f5f5;
+  border-right: 2px solid #f5f5f5;
 }
 
 @media screen and (max-width: 800px) {
@@ -451,6 +537,16 @@ a:active {
 
   .aboutus__item {
     flex-basis: 50%;
+  }
+
+  .comparison-wrap {
+    -webkit-box-pack: center;
+    justify-content: center;
+  }
+
+  .comparison__table {
+    flex-basis: 70%;
+    margin-bottom: 50px;
   }
 }
 
@@ -566,5 +662,9 @@ a:active {
 
   .assist__text_bold {
     margin-bottom: 25px;
+  }
+
+  .comparison__table {
+    flex-basis: 100%;
   }
 }
