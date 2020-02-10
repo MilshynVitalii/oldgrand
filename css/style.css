@@ -460,6 +460,52 @@ a:active {
   border-right: 2px solid #f5f5f5;
 }
 
+.stores {
+  background: url(../../img/stores/stores-bg.jpg) no-repeat center bottom;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.stores-wrap {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.stores__info {
+  flex-basis: 60%;
+  text-align: left;
+}
+
+.stores__title {
+  text-align: left;
+  margin-bottom: 70px;
+}
+
+.stores__list li {
+  font-size: 18px;
+  margin: 20px;
+}
+
+.stores__link {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.stores__link:hover {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.stores__go {
+  text-align: center;
+  line-height: 50px;
+}
+
 @media screen and (max-width: 800px) {
   .container {
     padding: 0 30px;
@@ -547,6 +593,20 @@ a:active {
   .comparison__table {
     flex-basis: 70%;
     margin-bottom: 50px;
+  }
+
+  .stores-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
+
+  .stores__title {
+    text-align: center;
+  }
+
+  .stores__go {
+    margin-top: 50px;
   }
 }
 
