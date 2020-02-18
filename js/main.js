@@ -51,14 +51,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   function showNextSlide() {
-    let windowWidth = document.documentElement.clientWidth;
     let styles = getComputedStyle(this.firstElementChild);
     let width = parseFloat(styles.width) + parseFloat(styles.marginLeft) * 2;
-    let slides = 3;
-    if (windowWidth > 560 && windowWidth < 800) {
-      slides = 2;
-    } else if (windowWidth < 560) {
-      slides = 1;
+    let slides = Math.trunc((width * 100) / this.offsetWidth);
+    switch (slides) {
+      case 25:
+        slides = 4;
+        break;
+      case 33:
+        slides = 3;
+        break;
+      case 50:
+        slides = 2;
+        break;
+      case 100:
+        slides = 1;
+        break;
     }
     counter++;
     if (counter > this.children.length - slides) {
