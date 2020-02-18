@@ -44,6 +44,23 @@ a
     font-size: 30px
     +bold
 
+.slider-prev, .slider-next
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 40px
+    height: 100%
+    background: rgba(black, 0.4) url(../../img/arrows.png) no-repeat right -20% center
+    border-radius: 2px
+.slider-prev
+    top: 0
+    left: 0
+    transform: rotate(180deg)
+.slider-next
+    right: 0
+.slider-prev:hover, .slider-next:hover
+    background-position: left -25% center
+
 @media screen and (max-width: 560px)
     section
         padding: 80px 0

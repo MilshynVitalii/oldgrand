@@ -20,23 +20,50 @@ document.addEventListener("DOMContentLoaded", function(event) {
     event.target.classList.add("reviews__categories-link_active");
   });
 
-  let youtubeSlider = document.querySelector(".reviews__slider");
-  let youtubeSliderScroll = "0%";
-  youtubeSlider.addEventListener("click", function(event) {
-    if (event.target.tagName != "BUTTON") return;
-    if (event.target.classList.contains("reviews__slider-next")) {
-      youtubeSliderScroll =
-        parseFloat(youtubeSliderScroll) > 90
-          ? "99.99%"
-          : parseFloat(youtubeSliderScroll) + 33.33 + "%";
-      this.firstElementChild.style.transform = `translateX(-${youtubeSliderScroll})`;
+  let videoSlider = document.querySelector(".reviews__slider-business");
+  let videoSliderNext = document.querySelector(".reviews .slider-next");
+  let videoSliderPrev = document.querySelector(".reviews .slider-prev");
+  let counter = 0;
+
+  videoSliderNext.addEventListener("click", showNextSlide.bind(videoSlider));
+  videoSliderPrev.addEventListener("click", showPrevSlide.bind(videoSlider));
+
+  let partnersSlider = document.querySelector(".partners__slider-wrap");
+  let partnersSliderNext = document.querySelector(".partners .slider-next");
+  let partnersSliderPrev = document.querySelector(".partners .slider-prev");
+  partnersSliderNext.addEventListener(
+    "click",
+    showNextSlide.bind(partnersSlider)
+  );
+  partnersSliderPrev.addEventListener(
+    "click",
+    showPrevSlide.bind(partnersSlider)
+  );
+
+  function showPrevSlide() {
+    let styles = getComputedStyle(this.firstElementChild);
+    let width = parseFloat(styles.width) + parseFloat(styles.marginLeft) * 2;
+    counter--;
+    if (counter <= 0) {
+      counter = 0;
     }
-    if (event.target.classList.contains("reviews__slider-prev")) {
-      youtubeSliderScroll =
-        parseFloat(youtubeSliderScroll) <= 0
-          ? "0%"
-          : parseFloat(youtubeSliderScroll) - 33.33 + "%";
-      this.firstElementChild.style.transform = `translateX(-${youtubeSliderScroll})`;
+    this.style.transform = `translateX(-${width * counter}px)`;
+  }
+
+  function showNextSlide() {
+    let windowWidth = document.documentElement.clientWidth;
+    let styles = getComputedStyle(this.firstElementChild);
+    let width = parseFloat(styles.width) + parseFloat(styles.marginLeft) * 2;
+    let slides = 3;
+    if (windowWidth > 560 && windowWidth < 800) {
+      slides = 2;
+    } else if (windowWidth < 560) {
+      slides = 1;
     }
-  });
+    counter++;
+    if (counter > this.children.length - slides) {
+      counter = this.children.length - slides;
+    }
+    this.style.transform = `translateX(-${width * counter}px)`;
+  }
 });
