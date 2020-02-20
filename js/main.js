@@ -9,16 +9,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
       : (menu.style.bottom = "");
   });
 
-  let reviewsCategories = document.querySelector(".reviews__categories");
-  reviewsCategories.addEventListener("click", function(event) {
+  let categories = document.querySelectorAll(".categories");
+  categories.forEach(category =>
+    category.addEventListener("click", seclectCategories)
+  );
+
+  function seclectCategories(event) {
     if (event.target.tagName != "A") return;
     event.preventDefault();
-    let selected = this.querySelectorAll(".reviews__categories-link_active");
+    let selected = this.querySelectorAll(".categories-link_active");
     for (let elem of selected) {
-      elem.classList.remove("reviews__categories-link_active");
+      elem.classList.remove("categories-link_active");
     }
-    event.target.classList.add("reviews__categories-link_active");
-  });
+    event.target.classList.add("categories-link_active");
+  }
 
   let videoSlider = document.querySelector(".reviews__slider-business");
   let videoSliderNext = document.querySelector(".reviews .slider-next");

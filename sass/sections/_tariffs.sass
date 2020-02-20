@@ -1,0 +1,79 @@
+.tariffs
+    background-color: $gray-color
+    &__title
+        text-align-last: left
+    &__subtitle
+        margin: 40px 0
+        font-size: 18px
+    &__options
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+    &__descr
+        font-weight: 400
+    &__cards
+        display: flex
+        flex-wrap: wrap
+        margin-top: 35px
+    &__card:last-child
+        max-width: 540px
+        margin: 0 auto
+
+.card
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+    padding: 50px 20px
+    border: 1px solid darken($gray-color, 10%)
+    background-color: #fff
+    &__title
+        text-align: center
+        font-size: 20px
+    &__img
+        display: block
+        max-width: 200px
+        margin: 30px auto
+    &__list
+        margin-bottom: 35px
+        font-size: 11px
+        font-weight: 400
+        li
+            padding: 10px
+            border-top: 1px solid $gray-color
+        li:last-child
+            border-bottom: 1px solid $gray-color
+        b
+            float: right
+    &__price
+        text-align: center
+        font-size: 13px
+        font-weight: 400
+        margin: auto 0 20px
+        &-total
+            font-size: 24px
+            +bold
+    &__button
+        display: block
+        width: 75%
+        height: 55px
+        margin: 15px auto 0
+        font-size: 18px
+        &:hover
+            opacity: 0.8
+        &:active
+            opacity: 1
+        &_buy
+            background: darken($gray-color, 35.5%)
+        &_foryou
+            background: linear-gradient(90deg, #ff2e00, #ff4c25)
+        &_family
+            background: linear-gradient(90deg, #008e00, #00a300)
+        &_business
+            background: linear-gradient(90deg, #001c67, #02388f)
+  
+
+@media screen and (max-width: 560px)
+    .tariffs
+        &__descr
+            text-align: center

@@ -123,6 +123,27 @@ a:active {
   background-position: left -25% center;
 }
 
+.categories {
+  display: -webkit-box;
+  display: flex;
+}
+
+.categories-link {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 700;
+  padding: 5px 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+
+.categories-link_active {
+  color: #e42626;
+  border-color: #e42626;
+}
+
 .container {
   max-width: 960px;
   height: 100%;
@@ -544,28 +565,10 @@ a:active {
 }
 
 .reviews__categories {
-  display: -webkit-box;
-  display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   width: 80%;
   margin: 70px auto;
-}
-
-.reviews__categories-link {
-  display: inline-block;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-family: "Proxima Nova", sans-serif;
-  font-weight: 700;
-  padding: 5px 10px;
-  border: 2px solid transparent;
-  border-radius: 5px;
-}
-
-.reviews__categories-link_active {
-  color: #e42626;
-  border-color: #e42626;
 }
 
 .reviews__slider {
@@ -676,7 +679,145 @@ a:active {
   font-size: 12px;
 }
 
+.tariffs {
+  background-color: #f5f5f5;
+}
+
+.tariffs__title {
+  -moz-text-align-last: left;
+  text-align-last: left;
+}
+
+.tariffs__subtitle {
+  margin: 40px 0;
+  font-size: 18px;
+}
+
+.tariffs__options {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tariffs__descr {
+  font-weight: 400;
+}
+
+.tariffs__cards {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.tariffs__card:last-child {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.card {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  padding: 50px 20px;
+  border: 1px solid gainsboro;
+  background-color: #fff;
+}
+
+.card__title {
+  text-align: center;
+  font-size: 20px;
+}
+
+.card__img {
+  display: block;
+  max-width: 200px;
+  margin: 30px auto;
+}
+
+.card__list {
+  margin-bottom: 35px;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.card__list li {
+  padding: 10px;
+  border-top: 1px solid #f5f5f5;
+}
+
+.card__list li:last-child {
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.card__list b {
+  float: right;
+}
+
+.card__price {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  margin: auto 0 20px;
+}
+
+.card__price-total {
+  font-size: 24px;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 700;
+}
+
+.card__button {
+  display: block;
+  width: 75%;
+  height: 55px;
+  margin: 15px auto 0;
+  font-size: 18px;
+}
+
+.card__button:hover {
+  opacity: 0.8;
+}
+
+.card__button:active {
+  opacity: 1;
+}
+
+.card__button_buy {
+  background: #9a9a9a;
+}
+
+.card__button_foryou {
+  background: -webkit-gradient(linear, left top, right top, from(#ff2e00), to(#ff4c25));
+  background: -webkit-linear-gradient(left, #ff2e00, #ff4c25);
+  background: linear-gradient(90deg, #ff2e00, #ff4c25);
+}
+
+.card__button_family {
+  background: -webkit-gradient(linear, left top, right top, from(#008e00), to(#00a300));
+  background: -webkit-linear-gradient(left, #008e00, #00a300);
+  background: linear-gradient(90deg, #008e00, #00a300);
+}
+
+.card__button_business {
+  background: -webkit-gradient(linear, left top, right top, from(#001c67), to(#02388f));
+  background: -webkit-linear-gradient(left, #001c67, #02388f);
+  background: linear-gradient(90deg, #001c67, #02388f);
+}
+
 @media screen and (max-width: 800px) {
+  .categories-link {
+    padding: 5px 5px;
+  }
+
   .container {
     padding: 0 30px;
   }
@@ -783,10 +924,6 @@ a:active {
     width: 100%;
   }
 
-  .reviews__categories-link {
-    padding: 5px 5px;
-  }
-
   .video {
     min-width: calc(50% - 30px);
   }
@@ -803,6 +940,12 @@ a:active {
 
   .section-title {
     font-size: 24px;
+  }
+
+  .categories {
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 20px auto;
   }
 
   .container {
@@ -914,12 +1057,6 @@ a:active {
     flex-basis: 100%;
   }
 
-  .reviews__categories {
-    -webkit-box-pack: center;
-    justify-content: center;
-    margin: 20px auto;
-  }
-
   .video {
     min-width: calc(100% - 30px);
   }
@@ -930,5 +1067,9 @@ a:active {
 
   .partners__slider-decr {
     padding: 20px 50px;
+  }
+
+  .tariffs__descr {
+    text-align: center;
   }
 }

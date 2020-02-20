@@ -1,22 +1,10 @@
 .reviews
     background-color: $gray-color
     &__categories
-        display: flex
         justify-content: space-around
         flex-wrap: wrap
         width: 80%
         margin: 70px auto
-        &-link
-            display: inline-block
-            font-size: 14px
-            text-transform: uppercase
-            +bold
-            padding: 5px 10px
-            border: 2px solid transparent
-            border-radius: 5px
-            &_active
-                color: $main-color
-                border-color: $main-color
     &__slider
         position: relative
         overflow: hidden
@@ -49,16 +37,10 @@
     .reviews
         &__categories
             width: 100%
-            &-link
-                padding: 5px 5px
     .video
         min-width: calc(50% - 30px)
 
 @media screen and (max-width: 560px)
-    .reviews
-        &__categories
-            justify-content: center
-            margin: 20px auto
     .video
         min-width: calc(100% - 30px)
 

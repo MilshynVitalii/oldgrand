@@ -296,13 +296,13 @@
     <section class="reviews">
       <div class="container">
         <h2 class="section-title">Отзывы</h2>
-        <ul class="reviews__categories">                                 
-          <li><a href="#" class="reviews__categories-link">Здравоохранение</a></li>
-          <li><a href="#" class="reviews__categories-link reviews__categories-link_active">Бизнес</a></li>
-          <li><a href="#" class="reviews__categories-link">Семья</a></li>
-          <li><a href="#" class="reviews__categories-link">ЖКХ</a></li>
-          <li><a href="#" class="reviews__categories-link">Недвижимость</a></li>
-          <li><a href="#" class="reviews__categories-link">Все</a></li>
+        <ul class="categories reviews__categories">                                 
+          <li><a href="#" class="categories-link">Здравоохранение</a></li>
+          <li><a href="#" class="categories-link categories-link_active">Бизнес</a></li>
+          <li><a href="#" class="categories-link">Семья</a></li>
+          <li><a href="#" class="categories-link">ЖКХ</a></li>
+          <li><a href="#" class="categories-link">Недвижимость</a></li>
+          <li><a href="#" class="categories-link">Все</a></li>
         </ul>
         <div class="reviews__slider">
           <div class="reviews__slider-business">
@@ -395,7 +395,124 @@
       </div>
     </section>
 
-    <!-- Настроить counter -->
+    <section class="tariffs">
+      <div class="container">
+        <h2 class="section-title tariffs__title">Выберите тариф</h2>
+        <h3 class="tariffs__subtitle">Вы можете оформить карту и начать пользоваться услугами уже сейчас!<br>
+          Оформление займёт всего 10 минут
+        </h3>
+        <div class="tariffs__options">
+          <p class="tariffs__descr">Выберите годовую карту, которая Вам подходит:</p>
+          <ul class="categories tariffs__categories">
+            <li>
+              <a href="#" class="categories-link">
+                Сравнить тарифы            
+              </a>
+            </li>
+            <li>
+              <a href="#" class="categories-link categories-link_active">
+                Тарифы
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="tariffs__cards">
+          <div class="card tariffs__card">
+            <div class="card__title">Персональная карта <br><b>для Вас</b></div>
+            <img src="./img/tariffs/card-1.jpg" alt="card-1" class="card__img">
+            <ul class="card__list">
+              <li>
+                <span>Устные консультации</span><b>2 в месяц</b>
+              </li>
+              <li>
+                <span>Консультации в отношении 3-х лиц</span><b>2 в год</b>
+              </li>
+              <li>
+                <span>Письменные консультации</span><b>2 в квартал</b>
+              </li>
+              <li>
+                <span>Звонок юриста</span><b>1 в год</b>
+              </li>
+              <li>
+                <span>Содействие в переговорах</span><b>1 в месяц</b>
+              </li>
+            </ul>
+            <div class="card__price">
+              <span>цена:</span>
+              <div class="card__price-total">65 $ за год</div>
+            </div>
+            <button class="card__button card__button_foryou">Консультация</button>
+            <button class="card__button card__button_buy">Купить</button>
+          </div>
+          <div class="card tariffs__card">
+              <div class="card__title">Карта <br><b>для всей семьи</b></div>
+              <img src="./img/tariffs/card-2.jpg" alt="card-1" class="card__img">
+              <ul class="card__list">
+                <li>
+                  <span>Устные консультации</span><b>2 в месяц</b>
+                </li>
+                <li>
+                  <span>Консультации в отношении 3-х лиц</span><b>2 в год</b>
+                </li>
+                <li>
+                  <span>Письменные консультации</span><b>2 в квартал</b>
+                </li>
+                <li>
+                  <span>Звонок юриста</span><b>1 в год</b>
+                </li>
+                <li>
+                  <span>Содействие в переговорах</span><b>1 в месяц</b>
+                </li>
+                <li>
+                  <span>Сервис для всей семьи</span>
+                </li>
+              </ul>
+              <div class="card__price">
+                <span>цена:</span>
+                <div class="card__price-total">65 $ за год</div>
+              </div>
+              <button class="card__button card__button_family">Консультация</button>
+              <button class="card__button card__button_buy">Купить</button>
+          </div>
+          <div class="card tariffs__card">
+              <div class="card__title">Карта<br><b>для бизнеса</b></div>
+              <img src="./img/tariffs/card-3.jpg" alt="card-1" class="card__img">
+              <ul class="card__list">
+                <li>
+                  <span>Устные консультации</span><b>2 в месяц</b>
+                </li>
+                <li>
+                  <span>Консультации в отношении 3-х лиц</span><b>2 в год</b>
+                </li>
+                <li>
+                  <span>Письменные консультации</span><b>2 в квартал</b>
+                </li>
+                <li>
+                  <span>Звонок юриста</span><b>1 в год</b>
+                </li>
+                <li>
+                  <span>Содействие в переговорах</span><b>1 в месяц</b>
+                </li>
+                <li>
+                  <span>Бизнес-косультации</span>
+                </li>
+                <li>
+                  <span>Рекомендуемая модель договора</span>
+                </li>
+                <li>
+                  <span>Обзор изменения в законодательстве</span>
+                </li>
+              </ul>
+              <div class="card__price">
+                <span>цена:</span>
+                <div class="card__price-total">65 $ за год</div>
+              </div>
+              <button class="card__button card__button_business">Консультация</button>
+              <button class="card__button card__button_buy">Купить</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="./js/main.js"></script>
   </body>
