@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   let videoSlider = document.querySelector(".reviews__slider-business");
   let videoSliderNext = document.querySelector(".reviews .slider-next");
   let videoSliderPrev = document.querySelector(".reviews .slider-prev");
-  let counter = 0;
+  videoSlider.counter = 0;
 
   videoSliderNext.addEventListener("click", showNextSlide.bind(videoSlider));
   videoSliderPrev.addEventListener("click", showPrevSlide.bind(videoSlider));
@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   let partnersSlider = document.querySelector(".partners__slider-wrap");
   let partnersSliderNext = document.querySelector(".partners .slider-next");
   let partnersSliderPrev = document.querySelector(".partners .slider-prev");
+  partnersSlider.counter = 0;
   partnersSliderNext.addEventListener(
     "click",
     showNextSlide.bind(partnersSlider)
@@ -43,11 +44,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function showPrevSlide() {
     let styles = getComputedStyle(this.firstElementChild);
     let width = parseFloat(styles.width) + parseFloat(styles.marginLeft) * 2;
-    counter--;
-    if (counter <= 0) {
-      counter = 0;
+    this.counter--;
+    if (this.counter <= 0) {
+      this.counter = 0;
     }
-    this.style.transform = `translateX(-${width * counter}px)`;
+    this.style.transform = `translateX(-${width * this.counter}px)`;
   }
 
   function showNextSlide() {
@@ -68,10 +69,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
         slides = 1;
         break;
     }
-    counter++;
-    if (counter > this.children.length - slides) {
-      counter = this.children.length - slides;
+    this.counter++;
+    if (this.counter > this.children.length - slides) {
+      this.counter = this.children.length - slides;
     }
-    this.style.transform = `translateX(-${width * counter}px)`;
+    this.style.transform = `translateX(-${width * this.counter}px)`;
   }
 });
