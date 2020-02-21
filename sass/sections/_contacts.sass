@@ -1,0 +1,67 @@
+.contacts
+    background: linear-gradient(90deg, $gray-color 0%, $gray-color 45%, #ffffff 45%, #ffffff 100%);
+    &__wrapper
+        display: flex
+        width: 100%
+    &__form
+        max-width: 320px
+        margin-right: 8%
+    &-form
+        input
+            padding: 0 20px
+            width: 100%
+            height: 50px
+            border: 1px solid darken($gray-color, 15%)
+            border-radius: 5px
+        textarea
+            padding: 10px
+            border: 1px solid darken($gray-color, 15%)
+            border-radius: 5px
+            resize: none
+            width: 100%
+        &__descr
+            display: block
+            margin: 15px 0
+            font-size: 14px
+            font-weight: 400
+        &__button
+            margin-top: 30px
+            color: #ffffff
+            +bold
+            cursor: pointer
+            + .contacts-form__descr
+                font-size: 13px
+                text-align: center
+
+    &__info
+        margin-left: 15%
+        font-size: 17px
+        font-weight: 400
+        &-title
+            text-align: left
+            margin-bottom: 80px
+        &-descr
+            display: block
+            margin: 30px 0 15px
+            font-size: 13px
+        p
+            margin-bottom: 25px
+
+@media screen and (max-width: 800px)
+    .contacts
+        background: linear-gradient(90deg, $gray-color 0%, $gray-color 50%, #ffffff 50%, #ffffff 100%);
+        &__form
+            margin-right: 2%
+        &__info
+            4%
+
+@media screen and (max-width: 560px)
+    .contacts
+        background: lighten($gray-color, 3%)
+        &__wrapper
+            flex-direction: column
+        &__info
+            &-title
+                margin: 80px 0 30px
+        &__form
+            margin: 0 auto
