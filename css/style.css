@@ -144,6 +144,14 @@ a:active {
   border-color: #e42626;
 }
 
+.footer {
+  background-color: #0e0e0e;
+}
+
+.footer img {
+  margin: 45px 0;
+}
+
 .container {
   max-width: 960px;
   height: 100%;
