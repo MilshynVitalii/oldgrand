@@ -79,4 +79,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     this.style.transform = `translateX(-${width * this.counter}px)`;
   }
+
+  let modal = document.querySelector(".modal");
+  let navigationButton = document.querySelector(".navigation__button");
+  navigationButton.onclick = function() {
+    modal.classList.add("modal_active");
+  };
+  modal.onclick = function(event) {
+    if (
+      event.target.classList.contains("modal__button") ||
+      event.target.classList.contains("modal-overlay")
+    ) {
+      modal.classList.remove("modal_active");
+    }
+  };
 });

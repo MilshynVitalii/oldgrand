@@ -5,7 +5,6 @@
         align-items: center
         height: 80px
         margin-top: 50px
-        z-index: 10
         &__tel
             +bold
             font-size: 18px
@@ -17,6 +16,7 @@
                 border: 2px solid $main-color
                 border-radius: 5px
                 margin-left: 10px
+                cursor: pointer
             & .android-icon
                 background: url(../img/android-1.png) no-repeat center
                 background-size: 60%
@@ -47,6 +47,7 @@
     width: 100%
     border-bottom: 2px solid $gray-color
     background-color: #ffffff
+    z-index: 10
     &__container
         display: flex
         justify-content: space-between

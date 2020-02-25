@@ -168,7 +168,6 @@ a:active {
   align-items: center;
   height: 80px;
   margin-top: 50px;
-  z-index: 10;
 }
 
 .header-subnav__tel {
@@ -189,6 +188,7 @@ a:active {
   border: 2px solid #e42626;
   border-radius: 5px;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .header-subnav__icons .android-icon {
@@ -232,6 +232,7 @@ a:active {
   width: 100%;
   border-bottom: 2px solid #f5f5f5;
   background-color: #ffffff;
+  z-index: 10;
 }
 
 .navigation__container {
@@ -893,6 +894,57 @@ a:active {
 
 .contacts__info p {
   margin-bottom: 25px;
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.modal_active {
+  z-index: 100;
+  opacity: 1;
+}
+
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100vh;
+  padding-top: 10%;
+}
+
+.modal__window {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.modal__window h4 {
+  width: 90%;
+}
+
+.modal__button {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  width: 30px;
+  color: inherit;
+  font-size: 20px;
+  background-color: #f5f5f5;
+}
+
+.modal__button:hover {
+  background-color: #ebebeb;
 }
 
 @media screen and (max-width: 800px) {
